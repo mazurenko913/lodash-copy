@@ -1,4 +1,4 @@
-function reverse (array) {
+function compact (array) {
   if (!Array.isArray(array)) {
     return undefined
   }
@@ -11,4 +11,4 @@ function reverse (array) {
   }
   return array
 }
-module.exports = { reverse }
+module.exports = { compact }
