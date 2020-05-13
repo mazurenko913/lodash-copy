@@ -1,4 +1,4 @@
-function join (array, sep) {
+function join (array, sep = ',') {
   if (!Array.isArray(array)) {
     return undefined
   }
@@ -7,8 +7,6 @@ function join (array, sep) {
     str += array[i] + sep
   }
   return str.slice(0, -1)
-
-  // return array.join(sep)
 }
 
 module.exports = { join }
