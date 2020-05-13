@@ -2,7 +2,6 @@ const { initial } = require('./index')
 
 it('should return the array without last element', () => {
   const testArray = [1, 2, 3, 4]
-  console.log(initial(testArray))
   expect(initial(testArray)).toEqual([1, 2, 3])
 })
 

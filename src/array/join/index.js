@@ -1,13 +1,12 @@
-function join (array) {
+function join (array, sep = ',') {
   if (!Array.isArray(array)) {
     return undefined
   }
-  // return array.join().split(',') first method
-
-  for (var i = 0; i < array.length; i += 1) {
-    array[i] = '' + array[i]
+  let str = ''
+  for (let i = 0; i < array.length; i++) {
+    str += array[i] + sep
   }
-  console.log(array)
-  return array
+  return str.slice(0, -1)
 }
+
 module.exports = { join }

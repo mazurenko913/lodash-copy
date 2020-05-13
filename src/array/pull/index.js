@@ -1,13 +1,9 @@
-function pull (array) {
+function pull (array, ...del) {
   if (!Array.isArray(array)) {
     return undefined
   }
 
-  const removeValFromIndex = [0, 2, 3, 5]
-
-  for (var i = removeValFromIndex.length - 1; i >= 0; i--) {
-    array.splice(removeValFromIndex[i], 1)
-  }
+  array = array.filter(item => !del.includes(item))
   return array
 }
 module.exports = { pull }
