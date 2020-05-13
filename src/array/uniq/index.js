@@ -1,8 +1,7 @@
-function pull (array) {
+function uniq (array) {
   if (!Array.isArray(array)) {
     return undefined
   }
-  const newArr = array.filter((value, index, arr) => arr.indexOf(value) === index)
-  return newArr
+  return array.filter((value, index, arr) => arr.indexOf(value) === index)
 }
-module.exports = { pull }
+module.exports = { uniq }
