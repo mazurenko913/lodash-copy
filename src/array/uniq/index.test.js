@@ -1,6 +1,6 @@
 const { uniq } = require('./index')
 
-it('should return new array of integer were only the first occurrence of each element is kept', () => {
+it('should return new array of number were only the first occurrence of each element is kept', () => {
   const testArray = [1, 2, 3, 2, 1]
   expect(uniq(testArray)).toEqual([1, 2, 3])
 })
