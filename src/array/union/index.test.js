@@ -1,21 +1,9 @@
 const { union } = require('./index')
 
-it('should creates an array of integer were only unique values is kept, from all given arrays', () => {
-  const firstTestArray = [1, 2, 3]
-  const secondTestArray = [3, 4]
-  expect(union(firstTestArray, secondTestArray)).toEqual([1, 2, 3, 4])
-})
-
-it('should creates an array of string were only unique values is kept, from all given arrays', () => {
-  const firstTestArray = ['a', 'b']
-  const secondTestArray = ['c', 'a', 'b']
-  expect(union(firstTestArray, secondTestArray)).toEqual(['a', 'b', 'c'])
-})
-
-it('should creates mixed array were only unique values is kept, from all given arrays', () => {
-  const firstTestArray = ['a', 1, 'b']
-  const secondTestArray = ['b', 2, 3]
-  expect(union(firstTestArray, secondTestArray)).toEqual(['a', 1, 'b', 2, 3])
+it('should creates array were only unique values is kept, from all given arrays', () => {
+  expect(union([[1, 2, 3], [3, 4], [5, 1]])).toEqual([1, 2, 3, 4, 5])
+  expect(union([['a', 'b'], ['c', 'a', 'b'], ['c', 't']])).toEqual(['a', 'b', 'c', 't'])
+  expect(union([['a', 1, 'b'], ['b', 2, 3], ['c', 2]])).toEqual(['a', 1, 'b', 2, 3, 'c'])
 })
 
 it('should return undefined if argument is not array', () => {
