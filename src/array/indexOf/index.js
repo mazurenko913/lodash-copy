@@ -3,6 +3,11 @@ function indexOf (array, value) {
     return undefined
   }
 
-  return array.indexOf(value)
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      console.log(i)
+      return i
+    }
+  }
 }
 module.exports = { indexOf }
