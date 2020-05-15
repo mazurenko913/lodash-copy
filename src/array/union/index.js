@@ -1,6 +1,6 @@
 const { uniq } = require('../uniq/index')
 
-function union (arrays) {
+function union (arrays, ...arr) {
   if (!Array.isArray(arrays)) {
     return undefined
   }
