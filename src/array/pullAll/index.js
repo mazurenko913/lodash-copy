@@ -3,8 +3,6 @@ function pullAll (array, delateArray) {
     return undefined
   }
 
-  array = array.filter(item => !delateArray.includes(item))
-  console.log(array)
-  return array
+  return array.filter(item => !delateArray.includes(item))
 }
 module.exports = { pullAll }
