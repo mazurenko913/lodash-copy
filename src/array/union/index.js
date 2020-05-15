@@ -1,8 +1,10 @@
+const { uniq } = require('../uniq/index')
+
 function union (arrays) {
   if (!Array.isArray(arrays)) {
     return undefined
   }
   const newArray = [].concat(...arrays)
-  return newArray.filter((value, index, arr) => arr.indexOf(value) === index)
+  return uniq(newArray)
 }
 module.exports = { union }
