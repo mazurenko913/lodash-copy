@@ -1,11 +1,10 @@
-function indexOf (array, value) {
+function indexOf (array, value, fromIndex = 0) {
   if (!Array.isArray(array)) {
     return undefined
   }
 
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0 + fromIndex; i < array.length; i++) {
     if (array[i] === value) {
-      console.log(i)
       return i
     }
   }
