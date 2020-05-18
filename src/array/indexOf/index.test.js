@@ -1,13 +1,21 @@
 const { indexOf } = require('./index')
 
 it('should return the index of number at which the first occurrence of value is found in array', () => {
-  expect(indexOf([1, 2, 3, 2, 1, 4, 2], 2, 4)).toEqual(6)
+  expect(indexOf([1, 2, 3, 2, 1, 4, 2], 2)).toEqual(1)
   expect(indexOf(['a', 'b', 'c', 'd'], 'b')).toEqual(1)
   expect(indexOf(['a', 2, 'c', 4, 'd', undefined], 4)).toEqual(3)
 })
 
+it('should find element start from index', () => {
+  expect(indexOf([1, 2, 3, 2, 1, 4, 2], 2, 2)).toEqual(3)
+})
+
 it('should return -1 when fromIndex is negative', () => {
   expect(indexOf([1, 2, 3], -5)).toEqual(-1)
+})
+
+it('should return -1 if fromIndex is not a number', () => {
+  expect(indexOf([1, 2, 3], 'a')).toEqual(-1)
 })
 
 it('should return -1 when fromIndex bigger than array', () => {

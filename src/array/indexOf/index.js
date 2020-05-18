@@ -11,11 +11,13 @@ function indexOf (array, value, fromIndex = 0) {
     return -1
   }
 
+  if (typeof fromIndex !== 'number') {
+    return -1
+  }
+
   for (let i = fromIndex; i < array.length; i++) {
     if (array[i] === value) {
       return i
-    } else if (array[i] === value) {
-      return true
     }
   }
   return -1
