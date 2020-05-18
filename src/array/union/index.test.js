@@ -13,6 +13,7 @@ it('should not delate any items if input array is uniq', () => {
 })
 
 it('should remove element if argument is not array', () => {
-  expect(union(123)).toBe(undefined)
-  expect(union('string')).toBe(undefined)
+  expect(union(123)).toStrictEqual([])
+  expect(union('string')).toStrictEqual([])
+  expect(union([1, 4, 2], 2, 'string')).toStrictEqual([1, 4, 2])
 })
