@@ -1,9 +1,7 @@
 const { uniq } = require('../uniq/index')
 
-function union (arrays, ...arr) {
-  if (!Array.isArray(arrays)) {
-    return undefined
-  }
+function union (...arrays) {
+
   const newArray = [].concat(...arrays)
   return uniq(newArray)
 }
