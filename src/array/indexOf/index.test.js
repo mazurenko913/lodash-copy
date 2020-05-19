@@ -22,10 +22,10 @@ it('should return -1 when fromIndex bigger than array', () => {
   expect(indexOf([1, 2, 3], 1, 5)).toEqual(-1)
 })
 
-it('should return -1 when fromIndex the element is not in the array', () => {
+it('should return -1 when fromIndex is not in the array', () => {
   expect(indexOf([1, 2, 3], 6)).toEqual(-1)
   expect(indexOf(['a', 'b', 'c', 'd'], 'y')).toEqual(-1)
-  expect(indexOf(['a', 2, 'c', 4, 'd', undefined], 10)).toEqual(-1)
+  expect(indexOf(['a', 2, 'c', 4, 'd', null], undefined)).toEqual(-1)
 })
 
 it('should return undefined if argument is not array', () => {
