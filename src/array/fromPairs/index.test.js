@@ -19,3 +19,8 @@ it('should return an object were values more then 2', () => {
 it('should return an object were values less then 2', () => {
   expect(fromParis([['a'], ['b']])).toStrictEqual({ a: undefined, b: undefined })
 })
+
+it('should return undefined if argument is not array', () => {
+  expect(fromParis(123)).toBe(undefined)
+  expect(fromParis('string')).toBe(undefined)
+})
