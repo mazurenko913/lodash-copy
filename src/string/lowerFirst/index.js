@@ -1,5 +1,5 @@
 function lowerFirst (string) {
-  if (!string) {
+  if (typeof (string) !== 'string') {
     return '' + string
   }
 

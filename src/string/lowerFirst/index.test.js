@@ -4,14 +4,14 @@ it('should converts the first character of string to lower case.', () => {
   expect(lowerFirst('MyString')).toEqual('myString')
 })
 
-it('if string is empty return it', () => {
+it('should return empty string, if string is empty', () => {
   expect(lowerFirst('')).toEqual('')
 })
 
-it('if value more then 1 ignore it', () => {
+it('should ignore value if they more then 1', () => {
   expect(lowerFirst('Aff', 'Att')).toEqual('aff')
 })
 
-it('if value is not a string, should convert it to string', () => {
+it('should convert value to string, if it is not a string', () => {
   expect(lowerFirst(NaN)).toEqual('NaN')
 })
