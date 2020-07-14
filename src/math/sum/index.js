@@ -3,6 +3,6 @@ function sum (array) {
     return undefined
   }
 
-  return array.reduce((a, b) => a + b)
+  return array.reduce((acc, currentValue) => acc + currentValue)
 }
 module.exports = { sum }
