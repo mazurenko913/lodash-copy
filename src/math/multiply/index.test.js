@@ -6,12 +6,12 @@ it('should multiply two numbers.', () => {
   expect(multiply(4, [2])).toEqual(8)
 })
 
-it('if numbers more then 2, should ignore it.', () => {
+it('should ignore numbers, if they more then 2.', () => {
   expect(multiply(1, 2, 4)).toEqual(2)
   expect(multiply(5, -2, 1)).toEqual(-10)
 })
 
-it('if one of argument is not a number should return NaN', () => {
+it('should return NaN, if one of argument is not a number.', () => {
   expect(multiply(4, 'a')).toEqual(NaN)
   expect(multiply(4, NaN)).toEqual(NaN)
   expect(multiply('a', 'a')).toEqual(NaN)
