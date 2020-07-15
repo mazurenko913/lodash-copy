@@ -7,9 +7,7 @@ function min (array) {
     return undefined
   }
 
-  if (array.some(function (curr) {
-    return typeof curr !== 'number' && isNaN(NaN)
-  })) {
+  if (array.some((curr) => { return typeof curr !== 'number' && isNaN(array[curr]) })) {
     return undefined
   }
 
