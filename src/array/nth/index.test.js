@@ -6,14 +6,14 @@ it('should return the element at index n of array.', () => {
   expect(nth(['a', 2, 'c', 4, 'd', undefined], 4)).toEqual('d')
 })
 
-it('If index is negative, the nth element from the end is returned.', () => {
+it('should return nth element from the end, if index is negative.', () => {
   expect(nth([1, 2, 3, 4, 5], -2)).toEqual(4)
   expect(nth(['a', 'b', 'c', 'd'], -1)).toEqual('d')
   expect(nth(['a', [], 'c', 4, isNaN, undefined], -4)).toEqual('c')
 })
 
 it('should return undefined if index bigger then array length', () => {
-  expect(nth([1, 2, 3, 4, 5], 6)).toEqual(undefined)
+  expect(nth([1, 2, 3, 4, 5], 50)).toEqual(undefined)
   expect(nth(['a', 'b', 'c', 'd'], -6)).toEqual(undefined)
 })
 
