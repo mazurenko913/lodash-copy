@@ -7,10 +7,10 @@ function max (array) {
     return undefined
   }
 
-  for (let i = 0; i < array.length; i++) {
-    if (typeof array[i] !== 'number' && isNaN(NaN)) {
-      return undefined
-    }
+  if (array.some(function (curr) {
+    return typeof curr !== 'number' && isNaN(NaN)
+  })) {
+    return undefined
   }
 
   return Math.max(...array)
