@@ -9,7 +9,7 @@ it('should return empty string, if string is empty', () => {
 })
 
 it('should ignore value if they more then 1', () => {
-  expect(escape('Aff', 'Att')).toEqual('aff')
+  expect(escape('i love cat & dog', 'hi > < bob')).toEqual('i love cat &amp; dog')
 })
 
 it('should convert value to string, if it is not a string', () => {
