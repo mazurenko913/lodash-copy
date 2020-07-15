@@ -7,7 +7,7 @@ function max (array) {
     return undefined
   }
 
-  if (array.some(curr => { return typeof curr !== 'number' || isNaN(curr) })) {
+  if (array.some(curr => typeof curr !== 'number' || isNaN(curr))) {
     return undefined
   }
 
