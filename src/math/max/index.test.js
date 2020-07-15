@@ -9,8 +9,9 @@ it('should return undefined if array is empty.', () => {
   expect(max([])).toBe(undefined)
 })
 
-it('should return undefined if array is falsey', () => {
+it('should return undefined if array is false', () => {
   expect(max([1, 50, { a: 'd' }, undefined, NaN])).toEqual(undefined)
+  expect(max([1, 50, false, NaN, undefined])).toEqual(undefined)
 })
 
 it('should return undefined if argument is not array', () => {
