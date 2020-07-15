@@ -8,7 +8,7 @@ function max (array) {
   }
 
   if (array.some(function (curr) {
-    return typeof curr !== 'number' && isNaN(NaN)
+    return typeof curr !== 'number' || isNaN(curr)
   })) {
     return undefined
   }
