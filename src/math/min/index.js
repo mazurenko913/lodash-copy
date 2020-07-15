@@ -3,12 +3,14 @@ function min (array) {
     return undefined
   }
 
-  if (!array.length > 0) {
+  if (!array.length) {
     return undefined
   }
 
-  if (array.includes(NaN, undefined)) {
-    return undefined
+  for (let i = 0; i < array.length; i++) {
+    if (typeof array[i] !== 'number' && isNaN(NaN)) {
+      return undefined
+    }
   }
 
   return Math.min(...array)
