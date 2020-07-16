@@ -1,8 +1,5 @@
 function isArray (value) {
-  if (Array.isArray(value)) {
-    return true
-  }
-
-  return false
+  return (Array.isArray(value))
 }
+
 module.exports = { isArray }
