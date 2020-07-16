@@ -1,10 +1,5 @@
-function toUpper (string) {
-  if (typeof (string) !== 'string') {
-    const lower = '' + string
-    return lower.toUpperCase()
-  }
-
-  return string.toUpperCase()
+function toUpper (value) {
+  return String(value).toUpperCase()
 }
 
 module.exports = { toUpper }
