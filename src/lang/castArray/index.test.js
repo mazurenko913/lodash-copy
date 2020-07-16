@@ -12,5 +12,6 @@ it('should ignore value, if they more then 1', () => {
 })
 
 it('should not convert value to array if it is array ', () => {
-  expect(castArray([2])).toEqual([2])
+  const arr = [2]
+  expect(castArray(arr)).toBe(arr)
 })

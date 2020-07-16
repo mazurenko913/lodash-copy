@@ -1,6 +1,6 @@
 function castArray (value) {
-  if (!Array.isArray(typeof value)) {
-    return [].concat(value)
+  if (!Array.isArray(value)) {
+    return [value]
   }
   return value
 }
