@@ -1,8 +1,5 @@
 function gt (first, second) {
-  if (first > second) {
-    return true
-  }
-  return false
+  return (first > second)
 }
 
 module.exports = { gt }
