@@ -1,8 +1,4 @@
 function isBoolean (value) {
-  if (typeof value === 'boolean') {
-    return true
-  }
-
-  return false
+  return typeof value === 'boolean'
 }
 module.exports = { isBoolean }
