@@ -7,7 +7,6 @@ it('should return the element at index n of array.', () => {
 })
 
 it('should return nth element from the end, if index is negative.', () => {
-  expect(nth([1, 2, 3, 4, 5], -2)).toEqual(4)
   expect(nth(['a', 'b', 'c', 'd'], -1)).toEqual('d')
   expect(nth(['a', [], 'c', 4, isNaN, undefined], -4)).toEqual('c')
 })

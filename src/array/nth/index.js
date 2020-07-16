@@ -3,18 +3,14 @@ function nth (array, index) {
     return undefined
   }
 
+  if (Math.abs(index) > array.length) {
+    return undefined
+  }
+
   if (index < 0) {
     return array[array.length + index]
   }
 
-  if (index > array.length) {
-    return undefined
-  }
-
-  for (let i = 0; i < array.length; i++) {
-    if (i === index) {
-      return array[i]
-    }
-  }
+  return array[index]
 }
 module.exports = { nth }
