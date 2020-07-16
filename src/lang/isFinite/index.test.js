@@ -15,6 +15,11 @@ it('should return false if value is NaN.', () => {
   expect(isFinite(NaN)).toEqual(false)
 })
 
+it('should return false if value is infinity .', () => {
+  expect(isFinite(Number.POSITIVE_INFINITY)).toEqual(false)
+  expect(isFinite(Number.NEGATIVE_INFINITY)).toEqual(false)
+})
+
 it('should check only first value, other ignore.', () => {
   expect(isFinite(1, NaN)).toEqual(true)
   expect(isFinite(23, 'aaa')).toEqual(true)
