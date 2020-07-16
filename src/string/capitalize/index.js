@@ -1,9 +1,9 @@
-function capitalize (string) {
-  if (typeof (string) !== 'string') {
-    return '' + string
+function capitalize (value) {
+  if (typeof (value) !== 'string') {
+    value = '' + value
   }
 
-  return string && string[0].toUpperCase() + string.slice(1).toLowerCase()
+  return value[0].toUpperCase() + value.slice(1).toLowerCase()
 }
 
 module.exports = { capitalize }
