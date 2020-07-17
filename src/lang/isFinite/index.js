@@ -1,10 +1,5 @@
 function isFinite (value) {
-  if (typeof value !== 'number' || isNaN(value) ||
-  value === Number.POSITIVE_INFINITY || value === Number.NEGATIVE_INFINITY) {
-    return false
-  }
-
-  return true
+  return typeof value === 'number' && !isNaN(value) && value !== Number.POSITIVE_INFINITY && value !== Number.NEGATIVE_INFINITY
 }
 
 module.exports = { isFinite }
