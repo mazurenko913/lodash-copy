@@ -5,7 +5,7 @@ it('should checks if type of value is symbol.', () => {
   expect(isSymbol(sym)).toEqual(true)
 })
 
-it('should return false if value is classified not as string.', () => {
+it('should return false if value is classified not as symbol.', () => {
   expect(isSymbol(1)).toEqual(false)
   expect(isSymbol(['abc'])).toEqual(false)
   expect(isSymbol(NaN)).toEqual(false)
