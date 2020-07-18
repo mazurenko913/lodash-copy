@@ -1,14 +1,16 @@
+const MAX_NUMBER = 1.7976931348623157e+308
+
 function toInteger (value) {
   if (typeof value !== 'number' || isNaN(value)) {
-    value = 0
+    return 0
   }
 
   if (value === Number.POSITIVE_INFINITY) {
-    return 1.7976931348623157e+308
+    return MAX_NUMBER
   }
 
   if (value === Number.NEGATIVE_INFINITY) {
-    return -1.7976931348623157e+308
+    return MAX_NUMBER * -1
   }
   return Math.trunc(value)
 }
