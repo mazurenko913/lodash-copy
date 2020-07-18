@@ -1,10 +1,10 @@
 function toString (value) {
-  const zero = -0
-  if (value === zero) {
-    value = '-0'
+  const zeroMinus = -0
+  if (value === zeroMinus) {
+    return '-0'
   }
   if (value === null || value === undefined) {
-    value = ''
+    return ''
   }
   return String(value)
 }
