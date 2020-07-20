@@ -6,9 +6,10 @@ function forEach (collection, cb) {
     for (let i = 0; i < collection.length; i++) {
       cb(collection[i])
     }
+    return
   }
 
-  if (isObject(collection) && !Array.isArray(collection)) {
+  if (isObject(collection)) {
     for (const key in collection) {
       cb(key, collection[key])
     }
