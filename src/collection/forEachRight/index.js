@@ -11,7 +11,7 @@ function forEachRight (collection, cb) {
   }
 
   if (isObject(collection)) {
-    for (const key in collection) {
+    for (const key of Object.keys(collection).reverse()) {
       cb(key, collection[key])
     }
   }
