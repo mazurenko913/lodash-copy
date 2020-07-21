@@ -19,4 +19,6 @@ it('should iterate each element of object.', () => {
   })
 
   expect(resultObj).toEqual(obj)
+  expect(Object.keys(resultObj)).toEqual(['b', 'a'])
+  expect(Object.values(resultObj)).toEqual([2, 1])
 })

@@ -3,9 +3,10 @@ const { isArray } = require('../../lang/isArray/index.js')
 
 function forEachRight (collection, cb) {
   if (isArray(collection)) {
-    collection.reverse()
-    for (let i = 0; i < collection.length; i++) {
-      cb(collection[i])
+    const newArr = collection
+    newArr.reverse()
+    for (let i = 0; i < newArr.length; i++) {
+      cb(newArr[i])
     }
     return
   }
