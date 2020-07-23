@@ -3,23 +3,26 @@ const { isArray } = require('../../lang/isArray/index.js')
 
 function flatMap (collection, cb) {
   if (isArray(collection)) {
-    const newArr = []
-    for (let i = 0; i < collection.length; ++i) {
-      newArr.push(collection[i])
-      newArr.push(collection[i])
-      cb(collection[i], i, newArr)
-    }
-    return newArr
+    const newArr = [];
+    collection.forEach(el => {
+      if (Array.isArray(el)) {
+        newArr.push(cb(...el))
+      } else {
+        newArr.push(cb(el))
+      }
+    })
+    return
   }
 
   if (isObject(collection)) {
-    const newArr = []
-    for (const key in collection) {
-      newArr.push(collection[key])
-      newArr.push(collection[key])
-      cb(collection[key], key, newArr)
-    }
-    return newArr
+    const newArr = Object.values(collection)
+    newArr.forEach(el => {
+      if (Array.isArray(el)) {
+        newArr.push(cb(...el))
+      } else {
+        newArr.push(cb(el))
+      }
+    })
   }
 }
 
