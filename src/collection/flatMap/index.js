@@ -1,14 +1,14 @@
 const { isObject } = require('../../lang/isObject/index.js')
 const { isArray } = require('../../lang/isArray/index.js')
 
-function flatMap (collection, cb) {
+function flatMap (collection, func) {
   if (isArray(collection)) {
-    const newArr = [];
+    const newArr = []
     collection.forEach(el => {
       if (Array.isArray(el)) {
-        newArr.push(cb(...el))
+        newArr.push(func(...el))
       } else {
-        newArr.push(cb(el))
+        newArr.push(func(el))
       }
     })
     return
@@ -18,9 +18,9 @@ function flatMap (collection, cb) {
     const newArr = Object.values(collection)
     newArr.forEach(el => {
       if (Array.isArray(el)) {
-        newArr.push(cb(...el))
+        newArr.push(func(...el))
       } else {
-        newArr.push(cb(el))
+        newArr.push(func(el))
       }
     })
   }
