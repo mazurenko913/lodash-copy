@@ -7,7 +7,8 @@ it('should iterate each element of array.', () => {
   forEachRight(arr, value => {
     resultArr.push(value)
   })
-  expect(resultArr).toEqual(arr)
+  expect(resultArr.reverse()).toEqual(arr)
+  expect(arr).toEqual([1, 2, 3])
 })
 
 it('should iterate each element of object.', () => {
