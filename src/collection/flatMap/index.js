@@ -5,10 +5,9 @@ function flatMap (collection, cb) {
   if (isArray(collection)) {
     const newArr = []
     for (let i = 0; i < collection.length; ++i) {
-      const index = collection.indexOf(collection[i])
       newArr.push(collection[i])
       newArr.push(collection[i])
-      cb(collection[i], index, newArr)
+      cb(collection[i], i, newArr)
     }
     return newArr
   }
