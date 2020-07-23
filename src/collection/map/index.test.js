@@ -3,7 +3,7 @@ const { map } = require('./index')
 it('should creates a function that square all elements in array.', () => {
   const arr = [2, 3]
   const expectArr = [4, 9]
-  const resultArr = map(arr, (value, index) => {
+  const resultArr = map(arr, (value, index, collection) => {
     return value * value
   })
   expect(resultArr).toEqual(expectArr)

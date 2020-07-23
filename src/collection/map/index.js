@@ -4,10 +4,8 @@ const { isObject } = require('../../lang/isObject/index.js')
 function map (collection, cb) {
   if (isArray(collection)) {
     const newArr = []
-    let index = 0
     for (let i = 0; i < collection.length; i++) {
-      index = collection.indexOf(collection[i])
-      newArr.push(cb(collection[i], index))
+      newArr.push(cb(collection[i], i, collection))
     }
     return newArr
   }
