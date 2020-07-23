@@ -17,7 +17,7 @@ function includes (collection, value, fromIndex = 0) {
   }
 
   if (isString(collection)) {
-    if ((collection.indexOf(value) >= 0)) {
+    if ((collection.indexOf(value, fromIndex) >= 0)) {
       return true
     }
     return false
@@ -25,7 +25,6 @@ function includes (collection, value, fromIndex = 0) {
 
   if (isObject(collection)) {
     const keys = Object.values(collection)
-
     if (fromIndex < 0) {
       fromIndex = keys.length + fromIndex
     }

@@ -19,9 +19,9 @@ it('should check for a substring of value, if collection is string.', () => {
   expect(includes('abcd', 'qw')).toEqual(false)
 })
 
-it('should work only with 2 arguments, collection and value, other ignore', () => {
+it('should check  a substring of value start fromIndex', () => {
   expect(includes('abcd', 'bc', 1)).toEqual(true)
-  expect(includes('abcd', 'b', 'a')).toEqual(true)
+  expect(includes('abcd', 'bc', 2)).toEqual(false)
 })
 
 it('should checks if value is in object kays.', () => {
