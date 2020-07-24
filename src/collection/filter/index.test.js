@@ -5,10 +5,7 @@ it('should Iterate over elements of collection, returning an array of all elemen
 
   const resultArr = []
   filter(arr, (value) => {
-    if (value > 0) {
-      console.log(value)
-      return resultArr.push(value)
-    }
+    return value > 0
   })
 
   expect(resultArr).toEqual([1, 2, 3, 4])
