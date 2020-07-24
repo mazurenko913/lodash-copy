@@ -8,7 +8,6 @@ it('should iterate each element of array.', () => {
     resultArr.push(value)
   })
   expect(resultArr).toEqual([3, 2, 1])
-  expect(arr).toEqual([1, 2, 3])
 })
 
 it('should iterate each element of object.', () => {
@@ -20,6 +19,4 @@ it('should iterate each element of object.', () => {
   })
 
   expect(resultObj).toEqual(obj)
-  expect(Object.keys(resultObj)).toEqual(['b', 'a'])
-  expect(Object.values(resultObj)).toEqual([2, 1])
 })
