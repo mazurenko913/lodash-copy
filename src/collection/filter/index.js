@@ -16,9 +16,11 @@ function filter (collection, cb) {
   if (isObject(collection, cb)) {
     const newArr = []
     Object.keys(collection).forEach(key => {
-      newArr.push(cb(key, collection[key]))
+      const result = cb(collection[key], key)
+      if (result) {
+        newArr.push(collection[key])
+      }
     })
-    console.log(newArr)
     return newArr
   }
 }

@@ -12,9 +12,11 @@ it('should Iterate over elements of array, returning an array of all elements pr
 
 it('should Iterate over elements of array of objects, returning an array of all elements predicate returns truthy for', () => {
   const obj = { name: 'alex', age: 18, gender: 'man', arms: 'two', legs: 1 }
-  const expectObj = ['alex', 18, 'man', 'two', 1]
+  const expectResult = ['alex', 'man', 'two']
 
-  const resultObj = filter(obj, (value, key) => key)
+  const result = filter(obj, (value, key) => {
+    return typeof value === 'string'
+  })
 
-  expect(resultObj).toEqual(expectObj)
+  expect(result).toEqual(expectResult)
 })
